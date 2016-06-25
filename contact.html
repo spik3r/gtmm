@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +25,8 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <![endif]-->
 
@@ -65,7 +66,7 @@
                 </p>
                 <p><strong>Address:</strong>
                     P.O Box 145
-                        <br>Mt Garnet, QLD 4872
+                    <br>Mt Garnet, QLD 4872
                 </p>
             </div>
             <div class="clearfix"></div>
@@ -74,26 +75,48 @@
 
     <div class="row">
         <div class="box">
-            < class="col-lg-12">
-                <hr>
-                <h2 class="intro-text text-center">Contact
-                    <strong>Us</strong>
-                </h2>
-                <hr>
-                <p>You won’t find a better mechanic in North Queensland.</br>
-                    Call Gordon now: <strong>0474 750 744</strong></p>
+            <hr>
+            <h2 class="intro-text text-center">Contact
+                <strong>Us</strong>
+            </h2>
+            <hr>
+            <p>You won’t find a better mechanic in North Queensland.</br>
+                Call Gordon now: <strong>0474 750 744</strong></p>
 
-                <ng-include src="'mailform.php'"> </ng-include>
-            </div>
+            <form id="contact_form" action="" method="POST">
+                <div class="row">
+                    <label for="name">Your name:</label><br />
+                    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                </div>
+                <div class="row">
+                    <label for="email">Your email:</label><br />
+                    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                </div>
+                <div class="row">
+                    <label for="message">Your message:</label><br />
+                    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+                </div>
+                <input id="submit_button" type="submit" value="Send email" />
+            </form>
         </div>
     </div>
+</div>
 
 </div>
-    <!-- /.container -->
+<!-- /.container -->
 
 <footer ng-include src="'footer.html'"></footer>
 
+<script>
+    $('#contact_form').submit(function(e){
+        e.preventDefault();
+        var formData = $(this).serialize();
+        $.post('mailform.php',formData,function(data){
+            alert(data);
+        });
 
+    });
+</script>
 </body>
 
 </html>
