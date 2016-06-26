@@ -4501,6 +4501,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand {
   color: #777;
+  background: url('../img/logo.jpeg');
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
