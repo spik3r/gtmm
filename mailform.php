@@ -8,8 +8,8 @@
 
 	}else{
 	    $from="From: $name<$email>\r\nReturn-path: $email";
-        $subject="Message sent using your contact form";
-		mail("kaiftait@gmail.com", $subject, $message, $from);
-		echo "Email sent!";
+        $subject="Contact form enquiry";
+		mail("gt.mm@hotmail.com", $subject, $message, $from);
+//		echo "Email sent!";
     }
 ?>

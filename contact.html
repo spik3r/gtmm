@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <title>GT Maintenance & Mechanical[/</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
                     0474 750 744
                 </p>
                 <p><strong>Email:</strong>
-                    <a href="mailto:gt.mm@hotmail.com">mailto:gt.mm@hotmail.com</a>
+                    <a href="mailto:gt.mm@hotmail.com">gt.mm@hotmail.com</a>
                 </p>
                 <p><strong>Address:</strong>
                     P.O Box 145
@@ -74,30 +74,42 @@
     </div>
 
     <div class="row">
+
         <div class="box">
             <hr>
             <h2 class="intro-text text-center">Contact
                 <strong>Us</strong>
             </h2>
             <hr>
-            <p>You won’t find a better mechanic in North Queensland.</br>
-                Call Gordon now: <strong>0474 750 744</strong></p>
+            <div class="col-lg-6">
+                <p>You won’t find a better mechanic in North Queensland.</br>
+                    Call Gordon for a quote now: <strong>0474 750 744</strong></br>
+                    Alternatively fill in your details on the right including:</br>
+                <ul class="about-list">
+                    <li>Location & contact number</li>
+                    <li>Vehicle year, make & model (if applicable)</li>
+                    <li>A brief description the the job </li> </br>
+                </ul>
+                </p>
+            </div>
 
+            <div class="col-lg-6">
             <form id="contact_form" action="" method="POST">
                 <div class="row">
                     <label for="name">Your name:</label><br />
-                    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                    <input id="name" class="input" name="name" type="text" value="" size="50" required placeholder="Name."/><br />
                 </div>
                 <div class="row">
                     <label for="email">Your email:</label><br />
-                    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                    <input id="email" class="input" name="email" type="email" value="" size="50" required placeholder="Email address."/><br />
                 </div>
                 <div class="row">
                     <label for="message">Your message:</label><br />
-                    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+                    <textarea id="message" class="input" name="message" rows="7" cols="50" required placeholder="Please enter a message."></textarea><br />
                 </div>
                 <input id="submit_button" type="submit" value="Send email" />
             </form>
+        </div>
         </div>
     </div>
 </div>
