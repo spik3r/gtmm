@@ -10,6 +10,6 @@
 	    $from="From: $name<$email>\r\nReturn-path: $email";
         $subject="Contact form enquiry";
 		mail("gt.mm@hotmail.com", $subject, $message, $from);
-//		echo "Email sent!";
+		echo "Email sent!";
     }
 ?>
